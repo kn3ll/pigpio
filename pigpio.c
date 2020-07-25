@@ -14002,6 +14002,17 @@ int gpioCfgSetInternals(uint32_t cfgVal)
    return 0;
 }
 
+int rawWaveCurrentSize() {
+   return wfc[wfcur];
+}
+
+int rawWaveCopyCurrent(int waves_c, rawWave_t * waves) {
+   if (waves_c < wfc[wfcur]) return -1;
+
+   memcpy(waves, wf[wfcur], sizeof(wf[0][0]) * wfc[wfcur]);
+   return 0;
+}
+
 
 /* include any user customisations */
 

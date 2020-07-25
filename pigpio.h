@@ -5290,6 +5290,11 @@ Not intended for general use.
 D*/
 
 
+int rawWaveCurrentSize();
+
+int rawWaveCopyCurrent(int waves_c, rawWave_t waves[]);
+
+
 #ifdef __cplusplus
 }
 #endif
